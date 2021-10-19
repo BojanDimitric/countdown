@@ -1,0 +1,88 @@
+.countdown {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .time-bar {
+        width: 100%;
+        height: 300px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        border: 2px solid black;
+
+        .elapsed {
+            width: 100%;
+            height: 0;
+            background-color: lightsalmon;
+        }
+
+        .remaining {
+            width: 100%;
+            height: 100%;
+            background-color: lightsteelblue;
+        }
+    }
+
+    .input {
+        width: 100%;
+        height: 50px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        border: 2px solid black;
+        border-radius: 4px;
+
+        input {
+            width: 8%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:invalid {
+                color: red;
+            }
+
+            &:last-child {
+                width: 4%;
+            }
+        }
+
+        span {
+            margin-bottom: 8px;
+        }
+    }
+
+    .controls {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            height: 100%;
+            border-radius: 4px;
+
+            &:first-child {
+                width: 70%;
+            }
+
+            &:last-child {
+                width: calc(30% - 10px);
+            }
+        }
+    }
+}
